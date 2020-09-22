@@ -1,14 +1,14 @@
-#API usuarios/canciones
+# API usuarios/canciones
 
 
-##Contrato de la API
+## Contrato de la API
 
-##GET
+## GET
 
 **GET: urlbase/songs ----> Obtienes una lista en formato Json de todas las canciones.
 **GET: urlbase/songName ----> Obtienes las canciones por su nombre.
 
-##post
+## post
 
 **POST: urlbase/addSong ----> Aqui escribirás la nueva canción en el body, en formato Json respetando que debe tener un name, artist, 
 duration y un album, ejemplo:
@@ -28,7 +28,7 @@ ejemplo:
 }
 ```
 
-##POST FAVS
+## POST FAVS
 
 **POST: urlbase/addFavSong ----> Aqui escribirás la id de la canción que desees agregar a favoritos, lo escribirá en el body con formato Json, 
 ejemplo con un id cualquiera:
@@ -38,7 +38,7 @@ ejemplo con un id cualquiera:
 }
 ```
 
-##Delete
+## Delete
 
 **DELETE: urlbase/delSong ----> Aqui escribirás la id de la canción que desees eliminar, lo escribirá en el body con formato Json, 
 ejemplo con un id cualquiera:
@@ -54,7 +54,7 @@ ejemplo con un id cualquiera:
   "_id":"285dkcbegh478t4"
 }
 ```
-##DELETE FAVS
+## DELETE FAVS
 
 
 **DELETE: urlbase/delFavSong ----> Aqui escribirás la id de la canción que desees eliminar de favoritos, lo escribirá en el body con formato Json, 

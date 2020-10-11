@@ -5,13 +5,15 @@ mongoose.connect('mongodb+srv://nahuelBenerozzo:contraseñaeningles@cluster0.gye
 const express = require('express');
 const cors = require('cors');
 
-server.use(cors());
-
 const server = express();
 server.use(express.json());
+
+server.use(cors());
+
 const songRoute = require('./song/route');
 const userRoute = require('./users/route');
 
+server.listen(process.env.PORT);
 
 //Songs
 server.get('/songs', songRoute.getSongs);
@@ -26,6 +28,6 @@ server.put('/songs/updateSong/:id', songRoute.updateSong);
  server.delete('/users', userRoute.deleteUser);
  server.put('/users/updateUser/:id', userRoute.updateUser);
 
-server.listen(4000, () =>
-  console.log('Example app listening on port 4000!'),
-);
+//  server.listen(4000, ()=>{
+//    console.log('lisening port 4000 ');
+//  });

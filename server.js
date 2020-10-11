@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://nahuelBenerozzo:contraseñaeningles@cluster0.gyezr.mongodb.net/api-modulo3?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const express = require('express');
+const cors = require('cors');
+
+server.use(cors());
+
 const server = express();
 server.use(express.json());
 const songRoute = require('./song/route');

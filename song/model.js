@@ -41,26 +41,8 @@ async function delSong(id){
     return await findAndDeleteSong;
 }
 
-
-//put
-const changeSong = async(song, id) => {
-    
-    const changeASong = Song.findOne({id: id});
-    
-        changeASong.name = song.name;
-        changeASong.album = song.album;
-        changeASong.duration = song.duration;
-        changeASong.artist = song.artist;
-        console.log("cha"+changeASong.name);
-        var changedSong = new Song(changeASong);
-        await changedSong.save();
-
-}
-
-
 module.exports ={
     getAllSongs,
     newSong,
-    delSong,
-    changeSong
+    delSong
 }

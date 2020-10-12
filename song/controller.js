@@ -14,16 +14,10 @@ async function deleteASong(id){
     return await songModel.delSong(id);  
 }
 
-//put
-async function updateASongs(song, id){
-    console.log('entró al añadir de controller');
-    return await songModel.changeSong(song, id);  
-}
 
 
 module.exports = {
     findAllSongs,
     addSongs,
-    deleteASong,
-    updateASongs
+    deleteASong
 }

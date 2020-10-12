@@ -36,26 +36,9 @@ async function deleteUser(req, res){
         res.status(500).send('Hubo un error' + e);
     }
 }
- 
-
-//put
-
-async function updateUser(req, res){
-    try {
-        await userController.updateAUser(req.body, req.params.id);
-        res.status(200).send('El usuario fue modificado correctamente');
-        res.redirect('/');
-    } catch (e) {
-        res.status(500).send('Hubo un error' + e);
-    }
-}
-
-
-
 
 module.exports = {
     getUsers,
     addNewUser,
-    deleteUser,
-    updateUser 
+    deleteUser 
 }

@@ -34,19 +34,10 @@ async function deleteSong(req, res){
     }
 }
 
-async function updateSong(req, res){
-    try {
-       await songsController.updateASongs(req.body, req.params.id);
-        res.status(200).send('La canción fue modificada correctamente');
-        res.redirect('/');
-    } catch (e) {
-        res.status(500).send('Hubo un error' + e);
-    }
-}
+
 
 module.exports = {
     getSongs,
     addNewSong,
-    deleteSong,
-    updateSong
+    deleteSong
 }
